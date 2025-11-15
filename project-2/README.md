@@ -116,15 +116,8 @@ cd project-2
 # Option 1: Direct open
 open index.html
 
-# Option 2: Using Live Server (VS Code)
-# Install Live Server extension, then right-click index.html > Open with Live Server
-```
 
-3. **Using Python server:**
-```bash
-python3 -m http.server 8000
-# Visit http://localhost:8000
-```
+
 
 ## 💻 Usage
 
@@ -161,7 +154,6 @@ Optimized breakpoints:
 - **Mobile:** 480px - 767px
 - **Small Mobile:** Below 360px
 
-All images use `flex-shrink: 0` and `object-fit` for proper scaling.
 
 ## ♿ Accessibility
 

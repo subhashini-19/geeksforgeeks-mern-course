@@ -90,7 +90,7 @@ project-2/
 - Professional work history
 - Company logos and roles
 - Chronological timeline
-- 5+ years of industry experience
+- 8+ years of industry experience
 
 ### 6. **Certifications**
 - Verified credentials

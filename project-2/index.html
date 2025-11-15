@@ -2,272 +2,324 @@
 <html lang="en">
 
 <head>
-  <!-- Meta tags for character encoding and viewport settings -->
+  <!-- ==================== META TAGS ==================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subha's Portfolio</title>
-  
+  <meta name="description" content="Subhashini Dhamodaran - Full Stack Developer Portfolio showcasing projects, experience, and certifications." />
+  <meta name="keywords" content="Full Stack Developer, Angular, Node.js, Portfolio" />
+  <meta name="author" content="Subhashini Dhamodaran" />
+  <title>Subhashini Dhamodaran - Portfolio</title>
+
+  <!-- ==================== EXTERNAL RESOURCES ==================== -->
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   
-  <!-- Google Fonts - Poppins font family -->
+  <!-- Google Fonts - Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
-  <!-- Custom stylesheet -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  
-  <!-- JavaScript file loaded with defer to ensure DOM is loaded first -->
-  <script defer src="index.js"></script>
 </head>
 
 <body>
-  <!-- ==================== HEADER & NAVIGATION SECTION ==================== -->
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
   <header>
     <nav class="navbar" aria-label="main navigation">
       <!-- Logo/Brand name -->
-      <a href="#home" class="logo">Subha</a>
+      <a href="#home" class="logo" aria-label="Subhashini Dhamodaran - Home">Subha</a>
       
       <!-- Navigation links -->
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#aboutme">About Me</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certificates">Certifications</a></li>
-        <li><a href="#education">Education</a></li>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="#home" role="menuitem">Home</a></li>
+        <li role="none"><a href="#aboutme" role="menuitem">About Me</a></li>
+        <li role="none"><a href="#work" role="menuitem">Work</a></li>
+        <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+        <li role="none"><a href="#certificates" role="menuitem">Certifications</a></li>
+        <li role="none"><a href="#education" role="menuitem">Education</a></li>
       </ul>
       
       <!-- Theme toggle button for dark/light mode -->
-      <button class="theme-toggle" id="themeToggle" aria-label="toggle of theme">
+      <button class="theme-toggle" id="themeToggle" aria-label="toggle dark/light theme" aria-pressed="false">
         🌙
       </button>
     </nav>
   </header>
 
-  <!-- ==================== HOME/HERO SECTION ==================== -->
-  <section id="home" class="home" aria-label="homepage">
-    <!-- Left side: Text content and CTA -->
-    <div class="home-text">
-      <h1>Subhashini Dhamodaran</h1>
-      <!-- Typing animation effect for profession -->
-      <p>I'm <span class="typed-text"></span></p>
-      <!-- Call-to-action button -->
-      <a href="#work" class="btn-primary" aria-label="view my work">View My Work</a>
-      
-      <!-- Social media links -->
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/subhashinid/" aria-label="LinkedIn">
-          <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/subhashini-19/" aria-label="GitHub">
-          <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub" />
-        </a>
+  <main>
+    <!-- ==================== HOME/HERO SECTION ==================== -->
+    <section id="home" class="home" aria-label="homepage">
+      <!-- Left side: Text content and CTA -->
+      <div class="home-text">
+        <h1>Subhashini Dhamodaran</h1>
+        <!-- Typing animation effect for profession -->
+        <p>I'm <span class="typed-text" aria-label="Animated job titles"></span></p>
+        <!-- Call-to-action button -->
+        <a href="#work" class="btn-primary" aria-label="view my work">View My Work</a>
+        
+        <!-- Social media links -->
+        <div class="social-links" role="navigation" aria-label="Social Media Links">
+          <a href="https://www.linkedin.com/in/subhashinid/" 
+             aria-label="LinkedIn" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/subhashini-19/" 
+             aria-label="GitHub" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub" />
+          </a>
+        </div>
       </div>
-    </div>
-    
-    <!-- Right side: Profile image -->
-    <div class="home-image" aria-label="profile photo">
-      <img src="assets/subha.jpeg" alt="Subhashini Dhamodaran profile photo" />
-    </div>
-  </section>
+      
+      <!-- Right side: Profile image -->
+      <div class="home-image" aria-label="profile photo">
+        <img src="assets/subha.jpeg" alt="Subhashini Dhamodaran profile photo" />
+      </div>
+    </section>
 
-  <!-- ==================== ABOUT ME SECTION ==================== -->
-  <section id="aboutme" class="about-me" role="region" aria-label="about me section">
-    <div class="aboutme">
-      <h2>About Me</h2>
-      <!-- Professional bio and experience summary -->
-      <p>
-        I'm Subhashini Dhamodaran, a Full Stack Developer with deep expertise in Angular and Node.js. With over 8 years
-        of experience, I specialize in building responsive, accessible, and high-performance web applications along with
-        scalable backend services.
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section id="aboutme" class="about-me" role="region" aria-labelledby="about-title">
+      <div class="aboutme">
+        <h2 id="about-title">About Me</h2>
+        <!-- Professional bio and experience summary -->
+        <p>
+          I'm Subhashini Dhamodaran, a Full Stack Developer with deep expertise in Angular and Node.js. With over 8 years
+          of experience, I specialize in building responsive, accessible, and high-performance web applications along with
+          scalable backend services.
+        </p>
+        <p>
+          I'm passionate about writing clean, maintainable, and optimized code while delivering smooth, intuitive user
+          experiences. I excel at partnering with cross-functional teams to transform complex requirements into reliable,
+          production-ready solutions.
+        </p>
+        <p>
+          Constantly learning and evolving with modern technologies, I'm driven by the goal of creating digital products
+          that truly make an impact.
+        </p>
+      </div>
+    </section>
 
-        I'm passionate about writing clean, maintainable, and optimized code while delivering smooth, intuitive user
-        experiences. I excel at partnering with cross-functional teams to transform complex requirements into reliable,
-        production-ready solutions.
-
-        Constantly learning and evolving with modern technologies, I'm driven by the goal of creating digital products
-        that truly make an impact.
-      </p>
-    </div>
-  </section>
-
-  <!-- ==================== RECENT WORK/PROJECTS SECTION ==================== -->
-  <section id="work" class="recent-works" role="region" aria-label="work section">
-    <h2>Recent Works</h2>
-    <!-- Grid container for project cards -->
-    <div class="work-grid">
-      <!-- Individual project card -->
-      <div class="work-card">
-        <!-- Project screenshot/thumbnail -->
-        <img src="assets/travelsite.png" alt="Travel Booking Website" />
-        <!-- Overlay with project details and action buttons -->
-        <div class="overlay">
-          <h3>Travel Booking Website</h3>
-          <div class="buttons">
-            <!-- Live demo button -->
-            <a class="btn" href="https://travelbooking-three.vercel.app/">Live Demo</a>
-            <!-- Source code button -->
-            <a href="https://github.com/subhashini-19/geeksforgeeks-mern-course/tree/main/project-1"
-              class="btn-outline">View Code</a>
+    <!-- ==================== RECENT WORK/PROJECTS SECTION ==================== -->
+    <section id="work" class="recent-works" role="region" aria-labelledby="work-title">
+      <h2 id="work-title">Recent Works</h2>
+      <!-- Grid container for project cards -->
+      <div class="work-grid">
+        <!-- Individual project card -->
+        <div class="work-card">
+          <!-- Project screenshot/thumbnail -->
+          <img src="assets/travelsite.png" alt="Travel Booking Website - A responsive travel booking platform" />
+          <!-- Overlay with project details and action buttons -->
+          <div class="overlay">
+            <h3>Travel Booking Website</h3>
+            <div class="buttons">
+              <!-- Live demo button -->
+              <a class="btn" 
+                 href="https://travelbooking-three.vercel.app/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 aria-label="View Travel Booking Website Live Demo">Live Demo</a>
+              <!-- Source code button -->
+              <a href="https://github.com/subhashini-19/geeksforgeeks-mern-course/tree/main/project-1"
+                 class="btn-outline"
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 aria-label="View Travel Booking Website Source Code">View Code</a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section id="experience" class="experience" role="region" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience</h2>
+      <!-- Container for experience timeline (refactored: each row contains title, arrow and company) -->
+      <div class="experience-list">
+        <!-- Experience Item 1 -->
+        <div class="experience-row">
+          <div class="exp-title">
+            <h3>Senior Frontend Developer</h3>
+            <p><time datetime="2022-09">Sep 2022</time> - Present</p>
+          </div>
+          <div class="exp-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="exp-company">
+            <img src="assets/mobilelive.jpeg" alt="MobileLIVE logo" />
+            <h3>MobileLIVE</h3>
+          </div>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="experience-row">
+          <div class="exp-title">
+            <h3>Angular Developer</h3>
+            <p><time datetime="2021-06">June 2021</time> - <time datetime="2021-09">Sep 2021</time></p>
+          </div>
+          <div class="exp-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="exp-company">
+            <img src="assets/capco.png" alt="Capco logo" />
+            <h3>Capco</h3>
+          </div>
+        </div>
+
+        <!-- Experience Item 3 -->
+        <div class="experience-row">
+          <div class="exp-title">
+            <h3>Angular Developer</h3>
+            <p><time datetime="2020-03">March 2020</time> - <time datetime="2021-05">May 2021</time></p>
+          </div>
+          <div class="exp-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="exp-company">
+            <img src="assets/avesdo.png" alt="Avesdo logo" />
+            <h3>Avesdo</h3>
+          </div>
+        </div>
+
+        <!-- Experience Item 4 -->
+        <div class="experience-row">
+          <div class="exp-title">
+            <h3>Software Engineer</h3>
+            <p><time datetime="2019-02">Feb 2019</time> - <time datetime="2019-09">Sep 2019</time></p>
+          </div>
+          <div class="exp-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="exp-company">
+            <img src="assets/microfocus.png" alt="MicroFocus logo" />
+            <h3>MicroFocus</h3>
+          </div>
+        </div>
+
+        <!-- Experience Item 5 -->
+        <div class="experience-row">
+          <div class="exp-title">
+            <h3>Associate Software Engineer</h3>
+            <p><time datetime="2016-07">July 2016</time> - <time datetime="2019-02">Feb 2019</time></p>
+          </div>
+          <div class="exp-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="exp-company">
+            <img src="assets/microfocus.png" alt="MicroFocus logo" />
+            <h3>MicroFocus</h3>
+          </div>
+        </div>
+
+        <!-- Experience Item 6 -->
+        <div class="experience-row">
+          <div class="exp-title">
+            <h3>Intern</h3>
+            <p><time datetime="2016-01">Jan 2016</time> - <time datetime="2016-06">Jun 2016</time></p>
+          </div>
+          <div class="exp-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="exp-company">
+            <img src="assets/microfocus.png" alt="MicroFocus logo" />
+            <h3>MicroFocus</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS SECTION ==================== -->
+    <section id="certificates" class="services" role="region" aria-labelledby="cert-title">
+      <h2 id="cert-title">Certifications</h2>
+      <!-- Grid container for certification cards -->
+      <div class="service-grid">
+        <!-- Udemy - Angular Certificate -->
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="assets/udemy.png" alt="Udemy logo" />
+          </div>
+          <h3>Angular - The Complete Guide</h3>
+          <a href="https://www.udemy.com/certificate/UC-8c2d4b77-948e-41ce-8106-2f5e249534ed/" 
+             class="btn-primary" 
+             aria-label="view Angular certificate"
+             target="_blank" 
+             rel="noopener noreferrer">Show Credentials</a>
+        </div>
+
+        <!-- Udemy - React Certificate -->
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="assets/udemy.png" alt="Udemy logo" />
+          </div>
+          <h3>React - The Complete Guide</h3>
+          <a href="https://www.udemy.com/certificate/UC-b86d8dca-9a36-4d74-98c1-2eadc28014f8/" 
+             class="btn-primary" 
+             aria-label="view React certificate"
+             target="_blank" 
+             rel="noopener noreferrer">Show Credentials</a>
+        </div>
+
+        <!-- Linux Foundation - Node.js Certificate -->
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="assets/lfcd-badge.png" alt="LF Certificate badge" />
+          </div>
+          <h3>Introduction to Node.js (LFW111)</h3>
+          <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/f2a79497-42c3-4b37-ab84-f8f2c0190973-subhashini-dhamodaran-547c7f62-964f-4abd-9b42-d3292e0bcfdd-certificate.pdf"
+             class="btn-primary" 
+             aria-label="view Node.js certificate"
+             target="_blank" 
+             rel="noopener noreferrer">Show Credentials</a>
+        </div>
+
+        <!-- OpenJS - Node.js Services Developer Badge -->
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="assets/jsnsd.jpeg" alt="OpenJS Node Services Developer badge" />
+          </div>
+          <h3>Node.js Services Developer</h3>
+          <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/f2a79497-42c3-4b37-ab84-f8f2c0190973-subhashini-dhamodaran-c3414394-d7c2-449c-bed0-709c64c15cb0-certificate.pdf"
+             class="btn-primary" 
+             aria-label="view OpenJS certificate"
+             target="_blank" 
+             rel="noopener noreferrer">Show Credentials</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section id="education" class="services" role="region" aria-labelledby="edu-title">
+      <h2 id="edu-title">Education</h2>
+      <!-- Grid container for education cards -->
+      <div class="service-grid">
+        <!-- Bachelor's Degree -->
+        <div class="service-card">
+          <h3>B.Tech (Information Technology - 2016)</h3>
+          <p>PSG College of Technology</p>
+          <p>Secured First Class with Distinction with CGPA of 9/10</p>
+        </div>
+
+        <!-- Higher Secondary School -->
+        <div class="service-card">
+          <h3>Higher Secondary (Class of 2012)</h3>
+          <p>A.E.T Matric Higher Secondary School</p>
+          <p>Secured 97% in Higher Secondary Examination</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer role="contentinfo" aria-label="Site Footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Subhashini Dhamodaran. All rights reserved.</p>
+      <p>Designed & developed by Subhashini Dhamodaran</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- ==================== EXPERIENCE SECTION ==================== -->
-  <section id="experience" role="region" class="experience" aria-label="experience section">
-    <h2>Experience</h2>
-    <!-- Container for experience timeline -->
-    <div class="full-grid">
-
-      <!-- Job titles and dates grid (Left column) -->
-      <div class="experience-grid">
-        <div class="experience-card">
-          <h3>Senior Frontend Developer</h3>
-          <p>(Sep 2022 - Present)</p>
-        </div>
-        <div class="experience-card">
-          <h3>Angular Developer</h3>
-          <p>(June 2021 - Sep 2021)</p>
-        </div>
-        <div class="experience-card">
-          <h3>Angular Developer</h3>
-          <p>(March 2020 - May 2021)</p>
-        </div>
-        <div class="experience-card">
-          <h3>Software Engineer</h3>
-          <p>(Feb 2019 - Sep 2019)</p>
-        </div>
-        <div class="experience-card">
-          <h3>Associate Software Engineer</h3>
-          <p>(July 2016 - Feb 2019)</p>
-        </div>
-        <div class="experience-card">
-          <h3>Intern</h3>
-          <p>(Jan 2016 - Jun 2016)</p>
-        </div>
-      </div>
-
-      <!-- Arrow indicators (Middle column) -->
-      <div class="experience-grid-arrow">
-        <div class="experience-card-arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="experience-card-arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="experience-card-arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="experience-card-arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="experience-card-arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="experience-card-arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </div>
-
-      <!-- Company logos and names grid (Right column) -->
-      <div class="experience-grid">
-        <div class="experience-card experience-card-company">
-          <img src="assets/mobilelive.jpeg" alt="MobileLIVE logo" />
-          <h3>MobileLIVE</h3>
-        </div>
-        <div class="experience-card experience-card-company">
-          <img src="assets/capco.png" alt="Capco logo" />
-          <h3>Capco</h3>
-        </div>
-        <div class="experience-card experience-card-company">
-          <img src="assets/avesdo.png" alt="Avesdo logo" />
-          <h3>Avesdo</h3>
-        </div>
-        <div class="experience-card experience-card-company">
-          <img src="assets/microfocus.png" alt="MicroFocus logo" />
-          <h3>MicroFocus</h3>
-        </div>
-        <div class="experience-card experience-card-company">
-          <img src="assets/microfocus.png" alt="MicroFocus logo" />
-          <h3>MicroFocus</h3>
-        </div>
-        <div class="experience-card experience-card-company">
-          <img src="assets/microfocus.png" alt="MicroFocus logo" />
-          <h3>MicroFocus</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CERTIFICATIONS SECTION ==================== -->
-  <section id="certificates" role="region" class="services" aria-label="certifications section">
-    <h2>Certifications</h2>
-    <!-- Grid container for certification cards -->
-    <div class="service-grid">
-      <!-- Udemy - Angular Certificate -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/udemy.png" alt="Udemy logo" />
-        </div>
-        <h3>Angular - The Complete Guide</h3>
-        <a href="https://www.udemy.com/certificate/UC-8c2d4b77-948e-41ce-8106-2f5e249534ed/" 
-           class="btn-primary" aria-label="view Angular certificate">Show Credentials</a>
-      </div>
-
-      <!-- Udemy - React Certificate -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/udemy.png" alt="Udemy logo" />
-        </div>
-        <h3>React - The Complete Guide</h3>
-        <a href="https://www.udemy.com/certificate/UC-b86d8dca-9a36-4d74-98c1-2eadc28014f8/" 
-           class="btn-primary" aria-label="view React certificate">Show Credentials</a>
-      </div>
-
-      <!-- Linux Foundation - Node.js Certificate -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/lfcd-badge.png" alt="LF Certificate badge" />
-        </div>
-        <h3>Introduction to Node.js (LFW111)</h3>
-        <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/f2a79497-42c3-4b37-ab84-f8f2c0190973-subhashini-dhamodaran-547c7f62-964f-4abd-9b42-d3292e0bcfdd-certificate.pdf"
-           class="btn-primary" aria-label="view Node.js certificate">Show Credentials</a>
-      </div>
-
-      <!-- OpenJS - Node.js Services Developer Badge -->
-      <div class="service-card">
-        <div class="service-icon">
-          <img src="assets/jsnsd.jpeg" alt="OpenJS Node Services Developer badge" />
-        </div>
-        <h3>The OpenJS Node.js Services Developer</h3>
-        <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/f2a79497-42c3-4b37-ab84-f8f2c0190973-subhashini-dhamodaran-c3414394-d7c2-449c-bed0-709c64c15cb0-certificate.pdf"
-           class="btn-primary" aria-label="view OpenJS certificate">Show Credentials</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== EDUCATION SECTION ==================== -->
-  <section id="education" role="region" class="services" aria-label="education section">
-    <h2>Education</h2>
-    <!-- Grid container for education cards -->
-    <div class="service-grid">
-      <!-- Bachelor's Degree -->
-      <div class="service-card">
-        <h3>B.Tech (Information Technology - 2016)</h3>
-        <p>PSG College of Technology</p>
-        <p>Secured First Class with Distinction with CGPA of 9/10</p>
-      </div>
-
-      <!-- Higher Secondary School -->
-      <div class="service-card">
-        <h3>Higher Secondary (Class of 2012)</h3>
-        <p>A.E.T Matric Higher Secondary School</p>
-        <p>Secured 97% in Higher Secondary Examination</p>
-      </div>
-    </div>
-  </section>
+  <!-- ==================== SCRIPTS ==================== -->
+  <script defer src="index.js"></script>
 </body>
 
 </html>

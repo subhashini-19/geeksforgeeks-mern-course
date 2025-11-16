@@ -176,6 +176,7 @@ document
 document.addEventListener("DOMContentLoaded", function () {
   const profileBtn = document.getElementById("profileBtn");
   const settingsBtn = document.getElementById("settingsBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
   if (profileBtn) {
     profileBtn.addEventListener("click", function (e) {
       if (e.metaKey || e.ctrlKey || e.button === 1) return;
@@ -190,6 +191,14 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       // use assign so browser history is preserved
       window.location.assign("settings.html");
+    });
+  }
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.button === 1) return;
+      e.preventDefault();
+      // use assign so browser history is preserved
+      window.location.assign("logoutBtn.html");
     });
   }
   

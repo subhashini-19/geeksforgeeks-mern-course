@@ -175,6 +175,7 @@ document
   // on clicking profile link in sidebar, use JS to navigate 
 document.addEventListener("DOMContentLoaded", function () {
   const profileBtn = document.getElementById("profileBtn");
+  const settingsBtn = document.getElementById("settingsBtn");
   if (profileBtn) {
     profileBtn.addEventListener("click", function (e) {
       if (e.metaKey || e.ctrlKey || e.button === 1) return;
@@ -183,4 +184,16 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.assign("profile.html");
     });
   }
+  if (settingsBtn) {
+    settingsBtn.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.button === 1) return;
+      e.preventDefault();
+      // use assign so browser history is preserved
+      window.location.assign("settings.html");
+    });
+  }
+  
 });
+
+
+

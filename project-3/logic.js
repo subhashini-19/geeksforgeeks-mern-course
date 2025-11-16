@@ -1,82 +1,80 @@
-document
-      .getElementById("toggleSidebar")
-      .addEventListener("click", function () {
-        document.querySelector(".sidebar").classList.toggle("show");
-      });
+document.getElementById("toggleSidebar").addEventListener("click", function () {
+  document.querySelector(".sidebar").classList.toggle("show");
+});
 
-    //chart
+//chart
 
-    const ctx = document.getElementById("utilChart");
+const ctx = document.getElementById("utilChart");
 
-    new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: ["May", "June", "July", "Aug", "Sept", "Oct"],
-        datasets: [
-          {
-            label: "Overall Utilization",
-            data: [34, 56, 77, 96, 788, 998],
-            tension: 0.3,
-            fill: true,
-            backgroundColor: "rgba(13,110,253,0.07)",
-            borderColor: "rgba(13,110,253,0.8)",
-            pointRadius: 4,
-          },
+new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: ["May", "June", "July", "Aug", "Sept", "Oct"],
+    datasets: [
+      {
+        label: "Overall Utilization",
+        data: [34, 56, 77, 96, 788, 998],
+        tension: 0.3,
+        fill: true,
+        backgroundColor: "rgba(13,110,253,0.07)",
+        borderColor: "rgba(13,110,253,0.8)",
+        pointRadius: 4,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: "top" } },
+    scales: { y: { beginAtZero: false, min: 40, max: 100 } },
+  },
+});
+
+// Reports Charts
+const barCtx = document.getElementById("reportBar");
+new Chart(barCtx, {
+  type: "bar",
+  data: {
+    labels: ["Payments", "Analytics", "Infra", "AI", "CRM"],
+    datasets: [
+      {
+        label: "Project Efficiency (%)",
+        data: [82, 76, 88, 91, 73],
+        backgroundColor: "rgba(13,110,253,0.6)",
+        borderRadius: 6,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: { beginAtZero: true, max: 100 },
+    },
+  },
+});
+
+const pieCtx = document.getElementById("reportPie");
+new Chart(pieCtx, {
+  type: "doughnut",
+  data: {
+    labels: ["Frontend", "Backend", "Data Science", "QA", "DevOps"],
+    datasets: [
+      {
+        data: [25, 30, 20, 15, 10],
+        backgroundColor: [
+          "rgba(13,110,253,0.8)",
+          "rgba(25,135,84,0.8)",
+          "rgba(255,193,7,0.8)",
+          "rgba(220,53,69,0.8)",
+          "rgba(102,16,242,0.8)",
         ],
       },
-      options: {
-        responsive: true,
-        plugins: { legend: { position: "top" } },
-        scales: { y: { beginAtZero: false, min: 40, max: 100 } },
-      },
-    });
+    ],
+  },
+  options: {
+    plugins: { legend: { position: "bottom" } },
+  },
+});
 
-    // Reports Charts
-    const barCtx = document.getElementById("reportBar");
-    new Chart(barCtx, {
-      type: "bar",
-      data: {
-        labels: ["Payments", "Analytics", "Infra", "AI", "CRM"],
-        datasets: [
-          {
-            label: "Project Efficiency (%)",
-            data: [82, 76, 88, 91, 73],
-            backgroundColor: "rgba(13,110,253,0.6)",
-            borderRadius: 6,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: { beginAtZero: true, max: 100 },
-        },
-      },
-    });
-
-    const pieCtx = document.getElementById("reportPie");
-    new Chart(pieCtx, {
-      type: "doughnut",
-      data: {
-        labels: ["Frontend", "Backend", "Data Science", "QA", "DevOps"],
-        datasets: [
-          {
-            data: [25, 30, 20, 15, 10],
-            backgroundColor: [
-              "rgba(13,110,253,0.8)",
-              "rgba(25,135,84,0.8)",
-              "rgba(255,193,7,0.8)",
-              "rgba(220,53,69,0.8)",
-              "rgba(102,16,242,0.8)",
-            ],
-          },
-        ],
-      },
-      options: {
-        plugins: { legend: { position: "bottom" } },
-      },
-    });
-    
 document
   .getElementById("saveProjectBtn")
   .addEventListener("click", function () {
@@ -172,3 +170,17 @@ document
       clearInlineError();
     }, 900);
   });
+
+
+  // on clicking profile link in sidebar, use JS to navigate 
+document.addEventListener("DOMContentLoaded", function () {
+  const profileBtn = document.getElementById("profileBtn");
+  if (profileBtn) {
+    profileBtn.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.button === 1) return;
+      e.preventDefault();
+      // use assign so browser history is preserved
+      window.location.assign("profile.html");
+    });
+  }
+});

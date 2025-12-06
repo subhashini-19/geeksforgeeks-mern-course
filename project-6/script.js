@@ -223,6 +223,7 @@ const liveMeta = document.getElementById("liveMeta");
 const previewPane = document.querySelector(".preview-pane");
 const previewBgButtons = document.querySelectorAll("[data-preview-bg]");
 const themeToggle = document.getElementById("themeToggle");
+const logoutBtn = document.getElementById("logoutBtn");
 
 const collections = {};
 const navButtons = new Map();
@@ -391,7 +392,7 @@ function addRepeater(section, collection) {
   // Role: inserts a repeatable section card with inputs.
   const index = collection.childElementCount;
   const card = document.createElement("div");
-  card.className = "border rounded-3 p-3 bg-light position-relative";
+  card.className = "border rounded-3 p-3 position-relative";
   card.dataset.index = index;
 
   section.fields.forEach((field) => {
@@ -474,7 +475,7 @@ function drawCardList(items = [], renderer) {
   return items
     .map(
       (item) => `
-      <div class="border rounded-3 p-3 mb-3 bg-light export-card">
+      <div class="border rounded-3 p-3 mb-3  export-card">
         ${renderer(item)}
       </div>
     `
@@ -545,6 +546,12 @@ function bindUI() {
 
   if (themeToggle) {
     themeToggle.addEventListener("click", toggleTheme);
+  }
+
+  if( logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      window.location.href = "logout.html";
+    });
   }
 }
 

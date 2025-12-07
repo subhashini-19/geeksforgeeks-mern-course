@@ -7,8 +7,8 @@ const cleanUpBtn = document.getElementById("cleanup");
 const downloadImageBtn = document.getElementById("downloadImage");
 
 const canvas = document.getElementById("canvas");
-canvas.height = 400;
-canvas.width = 800;
+canvas.height = 800;
+canvas.width = 1200;
 
 const ctx = canvas.getContext("2d");
 

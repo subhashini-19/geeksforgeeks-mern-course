@@ -12,6 +12,7 @@ export const ProductSlice = createSlice({
     setScreenProducts: (state, action) => {
       state.screenProducts = action.payload;
     },
+    
     setCartProducts: (state, action) => {
       if (state.cartProducts[action.payload]) {
         state.cartProducts = {
@@ -34,10 +35,23 @@ export const ProductSlice = createSlice({
       const {[action.payload]: _, ...rest} = state.cartProducts;
       state.cartProducts = rest;
        console.log("after item with id:", rest);
-    }
+    },
+    decrementFromCart: (state, action) => {
+      if (state.cartProducts[action.payload] && state.cartProducts[action.payload].quantity > 1) {
+        state.cartProducts = {
+          ...state.cartProducts,
+          [action.payload]: {
+            quantity: state.cartProducts[action.payload].quantity - 1,
+          },
+        };
+      } else {
+        const {[action.payload]: _, ...rest} = state.cartProducts;
+        state.cartProducts = rest;
+      }
+    },
   },
 });
 
-export const { setScreenProducts, setCartProducts , removeFromCart } = ProductSlice.actions;
+export const { setScreenProducts, setCartProducts , removeFromCart , decrementFromCart } = ProductSlice.actions;
 
 export default ProductSlice.reducer;

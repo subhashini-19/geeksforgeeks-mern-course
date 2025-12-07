@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "../ProductSlice";
+import { decrementFromCart, removeFromCart, setCartProducts } from "../ProductSlice";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,14 @@ const Cart = () => {
 
   function removeItem(id) {
     dispatch(removeFromCart(id));
+  }
+
+  function increment(id) {
+    dispatch(setCartProducts(id));
+  }
+
+  function decrement(id) {
+    dispatch(decrementFromCart(id));
   }
 
   return (
@@ -134,7 +142,7 @@ const Cart = () => {
                   <span>
                     {productData.title} × {quantity}
                   </span>
-                  <span>₹{discountedPrice * quantity}</span>
+                  <span>₹{(discountedPrice * quantity).toFixed(2)}</span>
                 </div>
               );
             })}

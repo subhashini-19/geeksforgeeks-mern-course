@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../Components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router";
@@ -7,7 +6,6 @@ import {
   removeFromCart,
   setCartProducts,
 } from "../ProductSlice";
-import { Navigate } from "react-router";
 
 const Cart = () => {
   const dispatch = useDispatch();

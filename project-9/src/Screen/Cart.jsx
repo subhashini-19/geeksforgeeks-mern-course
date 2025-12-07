@@ -1,10 +1,17 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
-import { decrementFromCart, removeFromCart, setCartProducts } from "../ProductSlice";
+import { Link, useNavigate } from "react-router";
+import {
+  decrementFromCart,
+  removeFromCart,
+  setCartProducts,
+} from "../ProductSlice";
+import { Navigate } from "react-router";
 
 const Cart = () => {
   const dispatch = useDispatch();
+    const navigate = useNavigate();
   const cartProducts = useSelector((store) => store.product.cartProducts);
   const screenProducts = useSelector((store) => store.product.screenProducts);
 
@@ -28,6 +35,9 @@ const Cart = () => {
     dispatch(decrementFromCart(id));
   }
 
+  function handlePdpNavigation(id) {
+    navigate(`/products/${id}`);
+  }
   return (
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
@@ -51,6 +61,7 @@ const Cart = () => {
 
             return (
               <div
+                onClick={() => handlePdpNavigation(productData.id)}
                 key={productData.id}
                 className="bg-white rounded-lg shadow p-4 flex gap-4"
               >

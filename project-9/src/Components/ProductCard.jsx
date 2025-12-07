@@ -17,7 +17,7 @@ const ProductCard = ({ productData }) => {
     dispatch(setCartProducts(id));
   }
 
-  function handlePdpNavigation() {
+  function handlePdpNavigation(id) {
     navigate(`/products/${id}`);
   }
 

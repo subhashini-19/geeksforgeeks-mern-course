@@ -10,6 +10,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/products/:productId" element={<Pdp />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="" element={<div className="p-10 text-center">404 - Page Not Found</div>} />
     </Routes>
   );
 };

@@ -104,7 +104,9 @@ const Cart = () => {
                     <div className="flex items-center gap-2">
                       <button
                         className="w-7 h-7 flex items-center justify-center bg-gray-200 rounded hover:bg-gray-300"
-                        onClick={() => decrement(productData.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          decrement(productData.id)}}
                       >
                         -
                       </button>
@@ -115,7 +117,9 @@ const Cart = () => {
 
                       <button
                         className="w-7 h-7 flex items-center justify-center bg-gray-200 rounded hover:bg-gray-300"
-                        onClick={() => increment(productData.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          increment(productData.id)}}
                       >
                         +
                       </button>
@@ -124,7 +128,9 @@ const Cart = () => {
                     {/* Remove button */}
                     <button
                       className="text-red-500 text-sm hover:underline"
-                      onClick={() => removeItem(productData.id)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        removeItem(productData.id)}}
                     >
                       Remove
                     </button>

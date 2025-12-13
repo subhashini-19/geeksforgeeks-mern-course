@@ -4,7 +4,7 @@ A simple, interactive, and responsive HTML5 Canvas drawing board with pen, erase
 
 
 ## 🌐 Live Demo
-[View Portfolio](https://writing-board-eight.vercel.app/)
+[Demo link](https://writing-board-eight.vercel.app/)
 
 
 ## Features

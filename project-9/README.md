@@ -10,7 +10,7 @@ Features:
 
 
 ## 🌐 Live Demo
-[View Portfolio](https://ecommerce-website-xi-sage.vercel.app/)
+[Demo link](https://ecommerce-website-xi-sage.vercel.app/)
 
 1. Created React Project with Vite
 2. Tailwind css integration

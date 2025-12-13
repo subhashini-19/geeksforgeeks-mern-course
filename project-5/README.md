@@ -6,7 +6,7 @@ QuickSlot is a simple, responsive slot‑booking demo built using **HTML**, **CS
 
 
 ## 🌐 Live Demo
-[View Portfolio](https://booking-slot-eight.vercel.app/)
+[Demo link](https://booking-slot-eight.vercel.app/)
 ---
 
 ## 🚀 Features

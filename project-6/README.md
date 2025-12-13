@@ -3,7 +3,7 @@
 A modern, responsive resume builder with live preview and PDF export.
 
 ## 🌐 Live Demo
-[View Portfolio](https://resume-builder-iota-olive.vercel.app/)
+[Demo link](https://resume-builder-iota-olive.vercel.app/)
 
 
 ✨ Features

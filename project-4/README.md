@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-[View Portfolio](https://careerboard-rose.vercel.app/)
+[Demo link](https://careerboard-rose.vercel.app/)
 
 This project is part of the GeeksforGeeks MERN Course
 . It is a frontend web application built using HTML, Tailwind CSS, and JavaScript, showcasing responsive design, interactivity, and DOM manipulation.

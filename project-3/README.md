@@ -2,7 +2,7 @@
 
 
 ## 🌐 Live Demo
-[View Portfolio](https://smart-resource-manager.vercel.app/)
+[Demo link](https://smart-resource-manager.vercel.app/)
 
 
 Simple single‑page style admin/dashboard demo built with HTML, Bootstrap 5 and vanilla JS.

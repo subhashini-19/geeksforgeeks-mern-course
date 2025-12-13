@@ -4,7 +4,7 @@ A simple task manager built with HTML, CSS, and JavaScript. Tasks are stored in 
 
 
 ## 🌐 Live Demo
-[View Portfolio](https://task-beige-gamma.vercel.app/)
+[Demo link](https://task-beige-gamma.vercel.app/)
 
 ## Features
 

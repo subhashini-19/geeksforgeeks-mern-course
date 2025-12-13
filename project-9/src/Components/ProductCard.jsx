@@ -23,7 +23,7 @@ const ProductCard = ({ productData }) => {
 
   return (
     <div
-      onClick={handlePdpNavigation}
+      onClick={ () =>handlePdpNavigation(id)}
       className="
         bg-white rounded-xl shadow-md overflow-hidden 
         hover:shadow-xl hover:scale-[1.02] 

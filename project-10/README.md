@@ -1,0 +1,2 @@
+# Photon Lab – Browser-based Image Editor
+Built a canvas-based image editing tool using HTML5 Canvas and JavaScript. Implemented real-time image filters, state-driven UI updates, image export functionality, and responsive layout. Focused on performance optimization and clean state management.
